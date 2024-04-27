@@ -1,4 +1,4 @@
-# King County Housing Price Model
+# King County House Pricing Model
 
 **Authors:** 
 ***
