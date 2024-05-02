@@ -1,6 +1,6 @@
 # King County House Pricing Model
 
-**Authors:** 
+**Authors: GROUP 3 Members** 
 ***
 <p align="center">
     <img src="Interstate 5 North - King County South - AARoads - Washington.jpeg" alt="Interstate 5 North - King County South - AARoads - Washington" width="700" height="450" />
@@ -37,9 +37,11 @@ The dataset provides a comprehensive view of house sales in King County, includi
 ### 3. What is the target variable?
 In the King County House Sales dataset, the target variable is likely the "price" column. This variable represents the sale price of the houses. The goal of the analysis is typically to predict house prices based on various features such as square footage, number of bedrooms, bathrooms, location, and other relevant attributes. Therefore, the "price" variable is the main focus of the analysis, and the regression models will be trained to predict this target variables.
 
->## Results
+## Results
+
 - What features are higly correlated with the sale price ?
 ![alt text](image.png)
+
 For continuous variables :`sqft_living`, `sqft_above`, `sqft_living15`
 For discrete variables :`bedrooms`,`bathrooms`, `grade`,`waterfront`.seem to show acorrelational increase in the median price as well as  agreater spread of prices in some cases
 **Simple Linear Regression**
@@ -71,10 +73,13 @@ Logarithmic transformation
 The R-squared of this model is 0.620 which means the model explains 62.0% is lower than the R-squared of the previous model model 3
 
 Normality Test after Log Transformation
+
 ![alt text](image-2.png)
+
 This test suggests that the residuals after logarithmic transformation the distribution of the residuals was homoskedastic
 
 ![alt text](image-3.png)
+
 This normality test suggests that the residuals after log transformation follows a normal distribution.
 
 ## Regression Results
@@ -104,5 +109,4 @@ This normality test suggests that the residuals after log transformation follows
 * The data in the dataset is from 2014 and 2015. Therefore, it may not be able to account for changes in the housing market since then. As a result, the model may not accurately predict the value of a house in 2024.
 * While the model can identify relationships between variables, it cannot prove causality. Therefore, it's important to be cautious about making causal claims based solely on the results of this model.
 * Overall, the analysis provides valuable insights for homeowners, real estate professionals, and potential buyers interested in the King County housing market. By understanding the key factors affecting house prices and acknowledging the limitations of the analysis, stakeholders can make informed decisions regarding pricing strategies, property enhancements, and investment opportunities. Further research and analysis may be warranted to explore additional factors or refine existing models for better predictive accuracy actionable insights.
-***
 ***
