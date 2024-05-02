@@ -83,6 +83,21 @@ This test suggests that the residuals after logarithmic transformation the distr
 This normality test suggests that the residuals after log transformation follows a normal distribution.
 
 ## Regression Results
+
+In the `Log-Transformed Multiple Linear Regression Model`, the coefficients represent the change in the natural logarithm of the price for a one-unit change in each predictor variable, holding all other variables constant.
+
+Here's a summarized interpretation of the results, highlighting the features that have the highest impact on housing prices:
+
+1. **sqft_living**: A one-unit increase in square footage of living space is associated with an increase in the natural logarithm of price by 0.0002 units.
+
+2. **sqft_living15**: Similarly, a one-unit increase in square footage of living space for the nearest 15 neighbors' houses is associated with an increase in the natural logarithm of price by 0.0001 units.
+
+3. **floors_3.0**: Houses with three floors have the highest impact on housing prices among the different floor types, with an increase in the natural logarithm of price by 0.3067 units compared to houses with one floor, holding all else constant.
+
+4. **waterfront_YES**: Houses with a waterfront view have a significant positive impact on housing prices, with an increase in the natural logarithm of price by 0.2947 units compared to houses without a waterfront view, holding all else constant.
+
+5. **grade_12**: Houses with a grade of 12 have the highest impact on housing prices among the different grade levels, with an increase in the natural logarithm of price by 1.3112 units compared to houses with a lower grade, holding all else constant.
+
 ## Evaluation
 ### Based on the analysis conducted on the King County House Sales dataset, we have gathered several insights:
 ***
