@@ -34,60 +34,83 @@
 # Data Analysis
 ## 1. Bivariate Analysis
 <p align="center">
+<<<<<<< HEAD
+    <img src="Grade.png" alt="Grade" width="900" height="500"/>
+</p>
+=======
     <img src="Interstate 5 North - King County South - AARoads - Washington.jpeg" alt="Interstate 5 North - King County South - AARoads - Washington" width="700" height="450" />
 </p>
 
 ## 2. Correlation Analysis
 ## Results
+>>>>>>> 715dd114794bbd932abdf2a7936bb230c0902a27
 
-- What features are higly correlated with the sale price ?
-![alt text](image.png)
+---
+<p align="center">
+    <img src="Waterfront.png" alt="Waterfront" width="900" height="500" />
+</p>
 
-For continuous variables :`sqft_living`, `sqft_above`, `sqft_living15`
-For discrete variables :`bedrooms`,`bathrooms`, `grade`,`waterfront`.seem to show acorrelational increase in the median price as well as  agreater spread of prices in some cases
-**Simple Linear Regression**
+---
+<p align="center">
+    <img src="Floors.png" alt="Floors" width="900" height="500" />
+</p>
 
-**Model 1**
+## 2. Correlation Analysis
 
-![alt text](image-1.png)
+Which features are highly correlated with the sale price?
 
-- The R-squared of this model is 0.404 which  means the model explains abput 40.4% of the variance in the target variable(price) which is not that great
+<p align="center">
+    <img src="Corr.png" alt="Corr" width="900" height="500" />
+</p>
 
-**Multiple linear Regression**
+Continuous variables (`sqft_living`, `sqft_above`, `sqft_living15`) and discrete variables (`bedrooms`,`bathrooms`, `grade`,`waterfront`) seem to show the highest correlational increase in the median price as well as  a greater spread of prices in some cases.
 
-**Model 2**
+# Data Modeling 
+## Base Predictor Model: Simple Linear Regression(SLR)
 
-**R-squared:** The R-squared value is 0.540, indicating that approximately 54% of the variance in housing prices is explained by the independent variables included in the model.<br>
+<p align="center">
+    <img src="image-1.png" alt="Corr"/>
+</p>
+
+>The R-squared of this model is 0.404 which means the model explains about 40.4% of the variance in the target variable(price).
+
+## Model 2: Multiple linear Regression Approach(MLR)
+
+>**R-squared:** The R-squared value is 0.540, indicating that approximately 54% of the variance in housing prices is explained by the independent variables included in the model.<br>
 **Coefficients:**<br>
-    1. `bedrooms`: Each additional bedroom is associated with a decrease in housing prices by approximately 47,910, holding other variables constant.<br>
-    2. `bathrooms`: Each additional bathroom is associated with an increase in housing prices by approximately 51,560, holding other variables constant.<br>
-    3. `floors`: Each additional floor is associated with an increase in housing prices by approximately 68,110, holding other variables constant.<br>
-    4. `condition_rating`: Each unit increase in the condition rating is associated with an increase in housing prices by approximately 22,990, holding other variables constant.<br>
+    1. `bedrooms`: Each additional bedroom is associated with a decrease in housing prices by approximately $48K, holding other variables constant.<br>
+    2. `bathrooms`: Each additional bathroom is associated with an increase in housing prices by approximately $51.5K, holding other variables constant.<br>
+    3. `floors`: Each additional floor is associated with an increase in housing prices by approximately $68K, holding other variables constant.<br>
+    4. `condition_rating`: Each unit increase in the condition rating is associated with an increase in housing prices by approximately $23K, holding other variables constant.<br>
 
-**Model 3**
+## Model 3: One-Hot Encoded Multiple Linear Regression(One-Hot MLR)
 
-The R-squared of the model is 0.635 which explains 63.5% of the variance in housing prices which is explained by the independent variables included in the model which is an improvement compared to the first and the second model
+>The R-squared of the model is 0.738 which explains 73.8% of the variance in housing prices which is explained by the independent variables included in the model which is an improvement compared to the first and the second model
 
-**Model 4**
+## Model 4: Log-Transformed Multiple Linear Regression(Log-MLR)
 
-Logarithmic transformation
-The R-squared of this model is 0.620 which means the model explains 62.0% is lower than the R-squared of the previous model model 3
+>The R-squared of this model is 0.784 which means the model explains 78.4% is lower than the R-squared of the previous model model 3.
 
-Normality Test after Log Transformation
+### Normality Test after Log Transformation
 
-![alt text](image-2.png)
+<p align="center">
+    <img src="image-2.png" alt="Resid"/>
+</p>
 
-This test suggests that the residuals after logarithmic transformation the distribution of the residuals was homoskedastic
+>This test suggests that the residuals after logarithmic transformation the distribution of the residuals was homoskedastic.
 
-![alt text](image-3.png)
+<p align="center">
+    <img src="image-3.png" alt="Q-Q"/>
+</p>
 
-This normality test suggests that the residuals after log transformation follows a normal distribution.
 
-## Regression Results
+>This normality test suggests that the residuals after log transformation follows a normal distribution.
+
+# Regression Results
 
 In the `Log-Transformed Multiple Linear Regression Model`, the coefficients represent the change in the natural logarithm of the price for a one-unit change in each predictor variable, holding all other variables constant.
 
-Here's a summarized interpretation of the results, highlighting the features that have the highest impact on housing prices:
+Here's a summarized interpretation of the results in log notation highlighting the features that have the highest impact on housing prices:
 
 1. **sqft_living**: A one-unit increase in square footage of living space is associated with an increase in the natural logarithm of price by 0.0002 units.
 
@@ -99,30 +122,33 @@ Here's a summarized interpretation of the results, highlighting the features tha
 
 5. **grade_12**: Houses with a grade of 12 have the highest impact on housing prices among the different grade levels, with an increase in the natural logarithm of price by 1.3112 units compared to houses with a lower grade, holding all else constant.
 
-## Evaluation
-### Based on the analysis conducted on the King County House Sales dataset, we have gathered several insights:
-***
-####  1. Key Factors Affecting House Prices:
-* Square footage of living space appears to have the most significant impact on house prices, as evidenced by its high correlation with price.
-* Other features such as square footage of living space, grade, waterfront status, and year of renovation also show notable correlations with house prices, indicating their influence on property values.
+Here's a summarized interpretation of the results in percentages:
 
-#### 2. Significance of Property Characteristics:
-* The number of bedrooms and bathrooms also plays a role in determining house prices, although their individual impacts may vary.
-* Renovation status can affect house prices, with recently renovated properties likely commanding higher values.
+1. The average price of a house is $150K
 
-#### 3. Neighborhood and Environmental Factors:
-* Proximity to amenities seems to correlate positively with house prices, suggesting that location plays a crucial role in property valuation.
-* Waterfront properties are associated with premium prices, indicating the desirability of waterfront locations among buyers.
-* Other neighborhood factors such as view and property condition also contribute to variations in house prices.
+2. Houses with a waterfront have a 33% higher price than houses with no waterfront.
 
-#### 4. Modeling and Predictive Insights:
-* Various regression models, including Simple Linear Regression and Multiple Linear Regression, have been applied to understand the relationships between independent variables and house prices.
-* Iterative modeling and feature engineering have helped refine the predictive accuracy of the models, allowing for better insights into the factors influencing house prices.
-## Conclusions
+3. Houses with excellent views have a 14% higher price than houses with average views.
 
-### In addition to the insights gathered, it's essential to consider the limitations of this analysis:
-* The dataset used for this analysis was limited to a specific geographic area and time period. It may not be representative of other locations or time periods, which could limit the generalizability of the results.
-* The data in the dataset is from 2014 and 2015. Therefore, it may not be able to account for changes in the housing market since then. As a result, the model may not accurately predict the value of a house in 2024.
-* While the model can identify relationships between variables, it cannot prove causality. Therefore, it's important to be cautious about making causal claims based solely on the results of this model.
-* Overall, the analysis provides valuable insights for homeowners, real estate professionals, and potential buyers interested in the King County housing market. By understanding the key factors affecting house prices and acknowledging the limitations of the analysis, stakeholders can make informed decisions regarding pricing strategies, property enhancements, and investment opportunities. Further research and analysis may be warranted to explore additional factors or refine existing models for better predictive accuracy actionable insights.
-***
+4. The higher the grade the higher the price as houses with grade 12 (Luxury) have a 100% higher price than houses with grade 5 (Fair).
+
+5. Houses in Medina city have the highest price, 62% higher than houses in Seattle.
+
+6. Houses in Mercer Island have a 25% higher price and houses in Bellevue have a 16% higher price.
+
+# Recommendations
+
+1. We recommend prioritizing investments or improvements that enhance the square footage of living space. Given its strong correlation with house prices, increasing the living space of a property could significantly boost its value.
+
+2. Upgrade property grades to enhance market appeal. Highlight proximity to amenities and waterfront locations in marketing efforts.
+
+3. Consider renovations to improve overall property grade and desirability. Emphasize lifestyle benefits to attract buyers and justify premium pricing. Focus on key factors such as living space, property grade, amenities, and location to realize the full property potential in the King County market.
+
+# Conclusions
+## In addition to the insights gathered, the analysis has some limitations:
+
+1. The dataset used for this analysis was limited to a specific geographic area and time period. It may not be representative of other locations or time periods, which could limit the generalizability of the results.
+
+2. The data in the dataset is from 2014 and 2015. Therefore, it may not be able to account for changes in the housing market since then. As a result, the model may not accurately predict the value of a house in 2024.
+
+3. While the model can identify relationships between variables, it cannot prove causality. Therefore, it's important to be cautious about making causal claims based solely on the results of this model.
