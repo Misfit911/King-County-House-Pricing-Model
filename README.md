@@ -34,16 +34,8 @@
 # Data Analysis
 ## 1. Bivariate Analysis
 <p align="center">
-<<<<<<< HEAD
     <img src="Grade.png" alt="Grade" width="900" height="500"/>
 </p>
-=======
-    <img src="Interstate 5 North - King County South - AARoads - Washington.jpeg" alt="Interstate 5 North - King County South - AARoads - Washington" width="700" height="450" />
-</p>
-
-## 2. Correlation Analysis
-## Results
->>>>>>> 715dd114794bbd932abdf2a7936bb230c0902a27
 
 ---
 <p align="center">
