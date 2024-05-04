@@ -1,42 +1,43 @@
 # King County House Pricing Model
 
 **Authors: GROUP 3 Members** 
-***
+
+---
 <p align="center">
     <img src="Interstate 5 North - King County South - AARoads - Washington.jpeg" alt="Interstate 5 North - King County South - AARoads - Washington" width="700" height="450" />
 </p>
 
-***
 # Overview
-As part of a real estate agency, we came up with a project that helps homeowners buy and/or sell homes in northwestern bound King County.
-***
-## Business Problem
-The real estate agency aims to assist homeowners in King County with selling their properties by providing advice on which features influence house prices.
-***
-### Main Objective
-The main focus of this project is to identify the key factors that affect home prices in the area, allowing homeowners to make informed decisions about pricing strategies and property enhancements to maximize their sale potential.
-Important research questions
-1. Market Analysis:
-What are the current market trends and conditions in King County's real estate market?
-What is the outlook for the King County real estate market in terms of future growth and stability?
-2. Property Characteristics:
-What are the typical features and characteristics of homes that command higher prices in King County?
-How do factors like property size, number of bedrooms and bathrooms, floor plan layout, and architectural style correlate with home prices?
-3. Neighborhood Analysis:
-Does the quality of view of houses have a significant effect on price?
+>### Project Focus
+>  * Our real estate project focuses on empowering homeowners in northwestern King County by providing actionable insights for buying and selling homes.
+>### Goals
+> * Empowerment: Equip homeowners with the insights and tools needed to navigate the real estate market confidently.
+> * Value Optimization: Maximize the value of properties through innovative strategies and personalized guidance.
+> * Transparency: Provide transparent and data-driven insights to ensure informed decision-making for both buyers and sellers.
+>### Significance
+> * In a rapidly evolving real estate market like King County, informed decision-making is key to success. Our project aims to revolutionize the home buying and selling experience by leveraging data-driven insights and innovative approaches.
 
-## Data Understanding
-### 1. Where did the data come from, and how do they relate to the data analysis questions? 
-The data comes from the King County House Sales dataset, which likely contains information on various properties sold in King County, Washington. This dataset is relevant to the data analysis questions as it provides insights into the factors influencing house prices in the area.
+# The Business Problem
 
+>### Understanding the Market Dynamics
+> * There's a rising market of home-buyers and home-sellers in King County, indicating a vibrant real estate landscape. However, navigating this market can be daunting for homeowners who are unsure about the key factors driving house prices. 
+>### Lack of Actionable Insights
+> * Many homeowners struggle to determine the optimal pricing strategies for their properties. Without actionable insights, they may underprice or overprice their homes, potentially missing out on maximizing their sale potential.
+>### Uncertainty for Home Buyers
+> * Home buyers face challenges in estimating the value of properties based on their preferences. They often lack guidance on the approximate price of houses that align with their desired features and budget.
 
-### 2. What do the data represent? Who is in the sample and what variables are included?
-The data in the King County House Sales dataset represent information about house sales in King County, Washington. Each row in the dataset likely represents a single house sale transaction, with various attributes recorded for each property.
-The dataset provides a comprehensive view of house sales in King County, including details about the properties sold and their associated attributes. This information is valuable for analyzing market trends, understanding factors influencing house prices, and providing insights to homeowners and real estate professionals.
+# Data Understanding
 
-### 3. What is the target variable?
-In the King County House Sales dataset, the target variable is likely the "price" column. This variable represents the sale price of the houses. The goal of the analysis is typically to predict house prices based on various features such as square footage, number of bedrooms, bathrooms, location, and other relevant attributes. Therefore, the "price" variable is the main focus of the analysis, and the regression models will be trained to predict this target variables.
+>### Data Source
+> * Our primary dataset, the King County House Sales dataset, serves as the foundation of our analysis. This dataset contains information on various properties sold in King County, Washington. It includes details such as property features, sale prices, and sales history. This dataset is central to our analysis as it provides insights into the factors influencing house prices in the area. The link to the dataset can be found <a href="https://www.kaggle.com/datasets/doesnotcompile/nf-kc-house-data">here</a>.
 
+# Data Analysis
+## 1. Bivariate Analysis
+<p align="center">
+    <img src="Interstate 5 North - King County South - AARoads - Washington.jpeg" alt="Interstate 5 North - King County South - AARoads - Washington" width="700" height="450" />
+</p>
+
+## 2. Correlation Analysis
 ## Results
 
 - What features are higly correlated with the sale price ?
